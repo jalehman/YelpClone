@@ -67,3 +67,9 @@ Also of note, constraints work on rotation to landscape!
 ### Walkthrough
 
 ![Video Walkthrough](...)
+
+### Credits
+
+* [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+* [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD)
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
