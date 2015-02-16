@@ -8,11 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		2F449CD11A8D81BA007AF848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CD01A8D81BA007AF848 /* AppDelegate.swift */; };
-		2F449CD31A8D81BA007AF848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CD21A8D81BA007AF848 /* ViewController.swift */; };
-		2F449CD61A8D81BA007AF848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F449CD41A8D81BA007AF848 /* Main.storyboard */; };
 		2F449CD81A8D81BA007AF848 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F449CD71A8D81BA007AF848 /* Images.xcassets */; };
 		2F449CDB1A8D81BA007AF848 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F449CD91A8D81BA007AF848 /* LaunchScreen.xib */; };
 		2F449CE71A8D81BA007AF848 /* YelpCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CE61A8D81BA007AF848 /* YelpCloneTests.swift */; };
+		2F449CF61A8D82D6007AF848 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CF41A8D82D6007AF848 /* SearchResultsViewController.swift */; };
+		2F449CF71A8D82D6007AF848 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F449CF51A8D82D6007AF848 /* SearchResultsViewController.xib */; };
+		2F449CF91A8D82FB007AF848 /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CF81A8D82FB007AF848 /* SearchResultsViewModel.swift */; };
+		2F449CFB1A8D8395007AF848 /* ViewModelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CFA1A8D8395007AF848 /* ViewModelServices.swift */; };
+		2F449CFD1A8D8675007AF848 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449CFC1A8D8675007AF848 /* SearchResult.swift */; };
+		2F449D021A8D86C7007AF848 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D001A8D86C7007AF848 /* SearchResultTableViewCell.swift */; };
+		2F449D031A8D86C7007AF848 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F449D011A8D86C7007AF848 /* SearchResultTableViewCell.xib */; };
+		2F449D051A8D873C007AF848 /* ReactiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D041A8D873C007AF848 /* ReactiveView.swift */; };
+		2F449D071A8D87D9007AF848 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D061A8D87D9007AF848 /* SearchResultViewModel.swift */; };
+		2F449D201A8D896A007AF848 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F449D151A8D894A007AF848 /* libReactiveCocoa-iOS.a */; };
+		2F449D311A8DAFE5007AF848 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D2E1A8DAFE5007AF848 /* RAC.swift */; };
+		2F449D321A8DAFE5007AF848 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D2F1A8DAFE5007AF848 /* RACObserve.swift */; };
+		2F449D331A8DAFE5007AF848 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D301A8DAFE5007AF848 /* RACSignal+Extensions.swift */; };
+		2F449D351A8DB269007AF848 /* YelpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D341A8DB269007AF848 /* YelpService.swift */; };
+		2F449D4F1A8EAF9B007AF848 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D4E1A8EAF9B007AF848 /* FiltersViewModel.swift */; };
+		2F449D5B1A8EB255007AF848 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D591A8EB255007AF848 /* FiltersViewController.swift */; };
+		2F449D5E1A8EB38B007AF848 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D5D1A8EB38B007AF848 /* Array+Extensions.swift */; };
+		2F449D611A8EDDF4007AF848 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D5F1A8EDDF4007AF848 /* FilterTableViewCell.swift */; };
+		2F449D621A8EDDF4007AF848 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F449D601A8EDDF4007AF848 /* FilterTableViewCell.xib */; };
+		2F449D641A8EE099007AF848 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D631A8EE099007AF848 /* FilterViewModel.swift */; };
+		2F449D661A904E6D007AF848 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D651A904E6D007AF848 /* Filter.swift */; };
+		2F449D691A90559E007AF848 /* ExpandCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D671A90559E007AF848 /* ExpandCategoriesTableViewCell.swift */; };
+		2F449D6A1A90559E007AF848 /* ExpandCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F449D681A90559E007AF848 /* ExpandCategoriesTableViewCell.xib */; };
+		2F449D6C1A910E22007AF848 /* ExpandCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D6B1A910E22007AF848 /* ExpandCategoriesViewModel.swift */; };
+		2F449D6E1A911054007AF848 /* YelpFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F449D6D1A911054007AF848 /* YelpFilters.swift */; };
+		49E9F234A78FC1EBBA4C4611 /* libPods-YelpClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AB5D7BB678648A6E0B85C /* libPods-YelpClone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,19 +47,95 @@
 			remoteGlobalIDString = 2F449CCA1A8D81BA007AF848;
 			remoteInfo = YelpClone;
 		};
+		2F449D121A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88037F8315056328001A5B19;
+			remoteInfo = ReactiveCocoa;
+		};
+		2F449D141A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		2F449D161A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88CDF7DC15000FCF00163A9F;
+			remoteInfo = ReactiveCocoaTests;
+		};
+		2F449D181A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
+			remoteInfo = "ReactiveCocoaTests-iOS";
+		};
+		2F449D1A1A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1860F412177C91B500C7B3C9;
+			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHost";
+		};
+		2F449D1C1A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
+			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
+		};
+		2F449D1E1A8D894A007AF848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D05AD39417F2D56F0080895B;
+			remoteInfo = "ReactiveCocoa-Mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062AB5D7BB678648A6E0B85C /* libPods-YelpClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YelpClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F449CCB1A8D81BA007AF848 /* YelpClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F449CCF1A8D81BA007AF848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F449CD01A8D81BA007AF848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F449CD21A8D81BA007AF848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2F449CD51A8D81BA007AF848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F449CD71A8D81BA007AF848 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F449CDA1A8D81BA007AF848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2F449CE01A8D81BA007AF848 /* YelpCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F449CE51A8D81BA007AF848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F449CE61A8D81BA007AF848 /* YelpCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpCloneTests.swift; sourceTree = "<group>"; };
+		2F449CF41A8D82D6007AF848 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		2F449CF51A8D82D6007AF848 /* SearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsViewController.xib; sourceTree = "<group>"; };
+		2F449CF81A8D82FB007AF848 /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
+		2F449CFA1A8D8395007AF848 /* ViewModelServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelServices.swift; sourceTree = "<group>"; };
+		2F449CFC1A8D8675007AF848 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		2F449D001A8D86C7007AF848 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		2F449D011A8D86C7007AF848 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		2F449D041A8D873C007AF848 /* ReactiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveView.swift; sourceTree = "<group>"; };
+		2F449D061A8D87D9007AF848 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		2F449D2A1A8D8A50007AF848 /* YelpClone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YelpClone-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F449D2E1A8DAFE5007AF848 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		2F449D2F1A8DAFE5007AF848 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
+		2F449D301A8DAFE5007AF848 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
+		2F449D341A8DB269007AF848 /* YelpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpService.swift; sourceTree = "<group>"; };
+		2F449D4E1A8EAF9B007AF848 /* FiltersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		2F449D591A8EB255007AF848 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		2F449D5D1A8EB38B007AF848 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		2F449D5F1A8EDDF4007AF848 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		2F449D601A8EDDF4007AF848 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		2F449D631A8EE099007AF848 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		2F449D651A904E6D007AF848 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2F449D671A90559E007AF848 /* ExpandCategoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandCategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		2F449D681A90559E007AF848 /* ExpandCategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandCategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		2F449D6B1A910E22007AF848 /* ExpandCategoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandCategoriesViewModel.swift; sourceTree = "<group>"; };
+		2F449D6D1A911054007AF848 /* YelpFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpFilters.swift; sourceTree = "<group>"; };
+		520066DBB3EA086DC64338F0 /* Pods-YelpClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YelpClone/Pods-YelpClone.debug.xcconfig"; sourceTree = "<group>"; };
+		65B2A9F7EAD1F15A04E393A1 /* Pods-YelpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-YelpClone/Pods-YelpClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F449D201A8D896A007AF848 /* libReactiveCocoa-iOS.a in Frameworks */,
+				49E9F234A78FC1EBBA4C4611 /* libPods-YelpClone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +161,12 @@
 		2F449CC21A8D81BA007AF848 = {
 			isa = PBXGroup;
 			children = (
+				2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */,
 				2F449CCD1A8D81BA007AF848 /* YelpClone */,
 				2F449CE31A8D81BA007AF848 /* YelpCloneTests */,
 				2F449CCC1A8D81BA007AF848 /* Products */,
+				78811043BEBF4EEA51E4D350 /* Pods */,
+				FE3299F1F51E026093A3B8BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +182,15 @@
 		2F449CCD1A8D81BA007AF848 /* YelpClone */ = {
 			isa = PBXGroup;
 			children = (
+				2F449D2D1A8DAFD5007AF848 /* Util */,
+				2F449CF31A8D82BD007AF848 /* Model */,
+				2F449CF21A8D82B8007AF848 /* ViewModel */,
+				2F449CF11A8D82B4007AF848 /* View */,
 				2F449CD01A8D81BA007AF848 /* AppDelegate.swift */,
-				2F449CD21A8D81BA007AF848 /* ViewController.swift */,
-				2F449CD41A8D81BA007AF848 /* Main.storyboard */,
 				2F449CD71A8D81BA007AF848 /* Images.xcassets */,
 				2F449CD91A8D81BA007AF848 /* LaunchScreen.xib */,
 				2F449CCE1A8D81BA007AF848 /* Supporting Files */,
+				2F449D2A1A8D8A50007AF848 /* YelpClone-Bridging-Header.h */,
 			);
 			path = YelpClone;
 			sourceTree = "<group>";
@@ -112,6 +220,129 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2F449CF11A8D82B4007AF848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D581A8EB22A007AF848 /* Filters */,
+				2F449CFE1A8D8699007AF848 /* SearchResults */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2F449CF21A8D82B8007AF848 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F449CFA1A8D8395007AF848 /* ViewModelServices.swift */,
+				2F449D701A911138007AF848 /* SearchResults */,
+				2F449D6F1A91112A007AF848 /* Filters */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F449CF31A8D82BD007AF848 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F449CFC1A8D8675007AF848 /* SearchResult.swift */,
+				2F449D341A8DB269007AF848 /* YelpService.swift */,
+				2F449D651A904E6D007AF848 /* Filter.swift */,
+				2F449D6D1A911054007AF848 /* YelpFilters.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2F449CFE1A8D8699007AF848 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				2F449CF41A8D82D6007AF848 /* SearchResultsViewController.swift */,
+				2F449CF51A8D82D6007AF848 /* SearchResultsViewController.xib */,
+				2F449CFF1A8D86A3007AF848 /* SearchResultCell */,
+			);
+			name = SearchResults;
+			sourceTree = "<group>";
+		};
+		2F449CFF1A8D86A3007AF848 /* SearchResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D001A8D86C7007AF848 /* SearchResultTableViewCell.swift */,
+				2F449D011A8D86C7007AF848 /* SearchResultTableViewCell.xib */,
+			);
+			name = SearchResultCell;
+			sourceTree = "<group>";
+		};
+		2F449D091A8D894A007AF848 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D131A8D894A007AF848 /* ReactiveCocoa.framework */,
+				2F449D151A8D894A007AF848 /* libReactiveCocoa-iOS.a */,
+				2F449D171A8D894A007AF848 /* ReactiveCocoaTests.octest */,
+				2F449D191A8D894A007AF848 /* ReactiveCocoaTests-iOS.octest */,
+				2F449D1B1A8D894A007AF848 /* ReactiveCocoa-iOS-UIKitTestHost.app */,
+				2F449D1D1A8D894A007AF848 /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
+				2F449D1F1A8D894A007AF848 /* libReactiveCocoa-Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F449D2D1A8DAFD5007AF848 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D041A8D873C007AF848 /* ReactiveView.swift */,
+				2F449D2E1A8DAFE5007AF848 /* RAC.swift */,
+				2F449D2F1A8DAFE5007AF848 /* RACObserve.swift */,
+				2F449D301A8DAFE5007AF848 /* RACSignal+Extensions.swift */,
+				2F449D5D1A8EB38B007AF848 /* Array+Extensions.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2F449D581A8EB22A007AF848 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D591A8EB255007AF848 /* FiltersViewController.swift */,
+				2F449D5F1A8EDDF4007AF848 /* FilterTableViewCell.swift */,
+				2F449D601A8EDDF4007AF848 /* FilterTableViewCell.xib */,
+				2F449D671A90559E007AF848 /* ExpandCategoriesTableViewCell.swift */,
+				2F449D681A90559E007AF848 /* ExpandCategoriesTableViewCell.xib */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		2F449D6F1A91112A007AF848 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				2F449D4E1A8EAF9B007AF848 /* FiltersViewModel.swift */,
+				2F449D631A8EE099007AF848 /* FilterViewModel.swift */,
+				2F449D6B1A910E22007AF848 /* ExpandCategoriesViewModel.swift */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		2F449D701A911138007AF848 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				2F449CF81A8D82FB007AF848 /* SearchResultsViewModel.swift */,
+				2F449D061A8D87D9007AF848 /* SearchResultViewModel.swift */,
+			);
+			name = SearchResults;
+			sourceTree = "<group>";
+		};
+		78811043BEBF4EEA51E4D350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				520066DBB3EA086DC64338F0 /* Pods-YelpClone.debug.xcconfig */,
+				65B2A9F7EAD1F15A04E393A1 /* Pods-YelpClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE3299F1F51E026093A3B8BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				062AB5D7BB678648A6E0B85C /* libPods-YelpClone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F449CEA1A8D81BA007AF848 /* Build configuration list for PBXNativeTarget "YelpClone" */;
 			buildPhases = (
+				627F7B3ABEF10C44EC31DDF9 /* Check Pods Manifest.lock */,
 				2F449CC71A8D81BA007AF848 /* Sources */,
 				2F449CC81A8D81BA007AF848 /* Frameworks */,
 				2F449CC91A8D81BA007AF848 /* Resources */,
+				838271ACDAE530639F10967E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +412,12 @@
 			mainGroup = 2F449CC21A8D81BA007AF848;
 			productRefGroup = 2F449CCC1A8D81BA007AF848 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2F449D091A8D894A007AF848 /* Products */;
+					ProjectRef = 2F449D081A8D894A007AF848 /* ReactiveCocoa.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2F449CCA1A8D81BA007AF848 /* YelpClone */,
@@ -187,14 +426,69 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2F449D131A8D894A007AF848 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 2F449D121A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D151A8D894A007AF848 /* libReactiveCocoa-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libReactiveCocoa-iOS.a";
+			remoteRef = 2F449D141A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D171A8D894A007AF848 /* ReactiveCocoaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.octest;
+			remoteRef = 2F449D161A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D191A8D894A007AF848 /* ReactiveCocoaTests-iOS.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoaTests-iOS.octest";
+			remoteRef = 2F449D181A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D1B1A8D894A007AF848 /* ReactiveCocoa-iOS-UIKitTestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ReactiveCocoa-iOS-UIKitTestHost.app";
+			remoteRef = 2F449D1A1A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D1D1A8D894A007AF848 /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-iOS-UIKitTestHostTests.octest";
+			remoteRef = 2F449D1C1A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F449D1F1A8D894A007AF848 /* libReactiveCocoa-Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libReactiveCocoa-Mac.a";
+			remoteRef = 2F449D1E1A8D894A007AF848 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2F449CC91A8D81BA007AF848 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F449CD61A8D81BA007AF848 /* Main.storyboard in Resources */,
 				2F449CDB1A8D81BA007AF848 /* LaunchScreen.xib in Resources */,
 				2F449CD81A8D81BA007AF848 /* Images.xcassets in Resources */,
+				2F449D031A8D86C7007AF848 /* SearchResultTableViewCell.xib in Resources */,
+				2F449D621A8EDDF4007AF848 /* FilterTableViewCell.xib in Resources */,
+				2F449CF71A8D82D6007AF848 /* SearchResultsViewController.xib in Resources */,
+				2F449D6A1A90559E007AF848 /* ExpandCategoriesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,13 +501,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		627F7B3ABEF10C44EC31DDF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		838271ACDAE530639F10967E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpClone/Pods-YelpClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F449CC71A8D81BA007AF848 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F449CD31A8D81BA007AF848 /* ViewController.swift in Sources */,
+				2F449D6C1A910E22007AF848 /* ExpandCategoriesViewModel.swift in Sources */,
+				2F449D641A8EE099007AF848 /* FilterViewModel.swift in Sources */,
+				2F449D331A8DAFE5007AF848 /* RACSignal+Extensions.swift in Sources */,
+				2F449D5E1A8EB38B007AF848 /* Array+Extensions.swift in Sources */,
 				2F449CD11A8D81BA007AF848 /* AppDelegate.swift in Sources */,
+				2F449D5B1A8EB255007AF848 /* FiltersViewController.swift in Sources */,
+				2F449CF61A8D82D6007AF848 /* SearchResultsViewController.swift in Sources */,
+				2F449D021A8D86C7007AF848 /* SearchResultTableViewCell.swift in Sources */,
+				2F449D661A904E6D007AF848 /* Filter.swift in Sources */,
+				2F449CFD1A8D8675007AF848 /* SearchResult.swift in Sources */,
+				2F449CFB1A8D8395007AF848 /* ViewModelServices.swift in Sources */,
+				2F449D6E1A911054007AF848 /* YelpFilters.swift in Sources */,
+				2F449D321A8DAFE5007AF848 /* RACObserve.swift in Sources */,
+				2F449CF91A8D82FB007AF848 /* SearchResultsViewModel.swift in Sources */,
+				2F449D311A8DAFE5007AF848 /* RAC.swift in Sources */,
+				2F449D051A8D873C007AF848 /* ReactiveView.swift in Sources */,
+				2F449D071A8D87D9007AF848 /* SearchResultViewModel.swift in Sources */,
+				2F449D611A8EDDF4007AF848 /* FilterTableViewCell.swift in Sources */,
+				2F449D4F1A8EAF9B007AF848 /* FiltersViewModel.swift in Sources */,
+				2F449D351A8DB269007AF848 /* YelpService.swift in Sources */,
+				2F449D691A90559E007AF848 /* ExpandCategoriesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +582,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2F449CD41A8D81BA007AF848 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F449CD51A8D81BA007AF848 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2F449CD91A8D81BA007AF848 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,21 +674,28 @@
 		};
 		2F449CEB1A8D81BA007AF848 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520066DBB3EA086DC64338F0 /* Pods-YelpClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YelpClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YelpClone/YelpClone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2F449CEC1A8D81BA007AF848 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B2A9F7EAD1F15A04E393A1 /* Pods-YelpClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YelpClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YelpClone/YelpClone-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +752,7 @@
 				2F449CEC1A8D81BA007AF848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F449CED1A8D81BA007AF848 /* Build configuration list for PBXNativeTarget "YelpCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +761,7 @@
 				2F449CEF1A8D81BA007AF848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

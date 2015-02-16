@@ -12,10 +12,28 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController!
+    
+    var viewModel: SearchResultsViewModel!
+    var viewModelServices: ViewModelServices!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        navigationController = UINavigationController()
+        viewModelServices = ViewModelServices(navigationController: navigationController)
+        viewModel = SearchResultsViewModel(services: viewModelServices)
+        let viewController = SearchResultsViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: false)
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.makeKeyAndVisible()
+        window!.rootViewController = navigationController
+        
+        UINavigationBar.appearance().barTintColor = UIColor.redColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+
         return true
     }
 
