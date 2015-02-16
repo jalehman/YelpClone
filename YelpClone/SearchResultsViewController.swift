@@ -13,6 +13,7 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
     // MARK: Properties
     
     @IBOutlet weak var resultsTable: UITableView!
+    @IBOutlet weak var emptyResultsView: UIView!
     
     private var filterButton: UIBarButtonItem!
     private let searchBar: UISearchBar = UISearchBar()
@@ -36,6 +37,8 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
         
         resultsTable.dataSource = self
         searchBar.delegate = self
+
+        emptyResultsView.hidden = true
         
         searchBar.placeholder = "Search Yelp"
         
@@ -97,10 +100,18 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
         }
         
         RACObserve(viewModel, "searchResults")
+            .skip(1)
             .deliverOn(RACScheduler.mainThreadScheduler())
-            .subscribeNext {
-            _ in
-            self.resultsTable.reloadData()
+            .subscribeNext {[unowned self] results in
+                let searchResults = results as [AnyObject]
+                if searchResults.count == 0 {
+                    self.emptyResultsView.hidden = false
+                    self.resultsTable.hidden = true
+                } else {
+                    self.resultsTable.reloadData()
+                    self.emptyResultsView.hidden = true
+                    self.resultsTable.hidden = false
+                }
         }
         
         let loadingSignal = RACObserve(viewModel, "loading")

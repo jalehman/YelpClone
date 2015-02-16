@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchResultsViewController" customModule="YelpClone" customModuleProvider="target">
             <connections>
+                <outlet property="emptyResultsView" destination="FhF-qd-ZL3" id="cZe-69-IKm"/>
                 <outlet property="resultsTable" destination="uAp-ZD-7wY" id="dvu-YX-9L4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,12 +20,36 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhF-qd-ZL3">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoops! Looks like no results match your filters. Try a different combination?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-uE-HYl">
+                            <rect key="frame" x="49" y="245" width="503" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="21o-GP-Jip"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hjx-uE-HYl" secondAttribute="trailing" constant="48" id="a68-uB-CSd"/>
+                        <constraint firstItem="hjx-uE-HYl" firstAttribute="top" secondItem="FhF-qd-ZL3" secondAttribute="top" constant="245" id="f1B-en-ROa"/>
+                        <constraint firstItem="hjx-uE-HYl" firstAttribute="leading" secondItem="FhF-qd-ZL3" secondAttribute="leading" constant="49" id="jcp-cj-VjW"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="uAp-ZD-7wY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H4c-WH-YMj"/>
+                <constraint firstItem="FhF-qd-ZL3" firstAttribute="bottom" secondItem="uAp-ZD-7wY" secondAttribute="bottom" id="Joo-d9-mcd"/>
+                <constraint firstItem="FhF-qd-ZL3" firstAttribute="leading" secondItem="uAp-ZD-7wY" secondAttribute="leading" id="V8N-rR-N5d"/>
                 <constraint firstAttribute="trailing" secondItem="uAp-ZD-7wY" secondAttribute="trailing" id="VFP-LD-fR7"/>
+                <constraint firstItem="FhF-qd-ZL3" firstAttribute="top" secondItem="uAp-ZD-7wY" secondAttribute="top" id="bV1-ao-Ngy"/>
                 <constraint firstItem="uAp-ZD-7wY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cMF-0T-1vL"/>
+                <constraint firstItem="FhF-qd-ZL3" firstAttribute="trailing" secondItem="uAp-ZD-7wY" secondAttribute="trailing" id="prr-Nb-3kl"/>
                 <constraint firstAttribute="bottom" secondItem="uAp-ZD-7wY" secondAttribute="bottom" id="u9h-Xd-QaS"/>
             </constraints>
         </view>
