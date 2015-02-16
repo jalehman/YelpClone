@@ -15,7 +15,7 @@ class SearchResultsViewModel: NSObject, FiltersViewModelDelegate {
     dynamic var searchResults: [SearchResultViewModel] = []
     dynamic var searchText: String = ""
     
-    var yelpFilters: YelpFilters = YelpFilters()
+    dynamic var yelpFilters: YelpFilters = YelpFilters()
     
     private let services: ViewModelServices
     
@@ -26,10 +26,14 @@ class SearchResultsViewModel: NSObject, FiltersViewModelDelegate {
         
         super.init()
         
-        RACObserve(self, "searchText")
-            .throttle(0.25)
-            .flattenMapAs { [unowned self] (text: NSString) -> RACStream in
-                return self.searchYelp(text)
+        let searchTextChangedSignal = RACObserve(self, "searchText")
+        let filtersChangedSignal = RACObserve(self, "yelpFilters")
+        
+        let combinedSignal = RACSignal.merge([searchTextChangedSignal, filtersChangedSignal])
+        
+        combinedSignal.throttle(0.25)
+            .flattenMap { [unowned self] _ -> RACStream in
+                return self.searchYelp()
             }.subscribeNext { [unowned self] any in
                 let searchResults = any as [SearchResult]
                 self.searchResults = searchResults.map { SearchResultViewModel(services: self.services, result: $0) }
@@ -50,12 +54,13 @@ class SearchResultsViewModel: NSObject, FiltersViewModelDelegate {
     
     func filtersViewModelDidComplete(filtersViewModel: FiltersViewModel, yelpFilters: YelpFilters) {
         self.yelpFilters = yelpFilters
+        services.yelpService.searchWithTerm(searchText, filters: yelpFilters)
         services.popActiveModal()
     }
     
     // MARK: Private
     
-    private func searchYelp(searchText: String) -> RACSignal {
-        return services.yelpService.searchWithTerm(searchText)
+    private func searchYelp() -> RACSignal {
+        return services.yelpService.searchWithTerm(self.searchText, filters: yelpFilters)
     }
 }

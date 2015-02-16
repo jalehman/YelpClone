@@ -65,7 +65,7 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
         resultsTable.reloadData()
     }
     
-    // MARK: Actions
+    
     
     func showFilters(sender: AnyObject) {
         viewModel.showFilters()
@@ -96,7 +96,9 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
             return tuple.second as NSString
         }
         
-        RACObserve(viewModel, "searchResults").subscribeNext {
+        RACObserve(viewModel, "searchResults")
+            .deliverOn(RACScheduler.mainThreadScheduler())
+            .subscribeNext {
             _ in
             self.resultsTable.reloadData()
         }

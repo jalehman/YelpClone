@@ -30,8 +30,29 @@ class YelpService: BDBOAuth1RequestOperationManager {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func searchWithTerm(term: String) -> RACSignal {
+    func searchWithTerm(term: String, filters: YelpFilters) -> RACSignal {
         var parameters = ["term": term, "ll": "37.774866,-122.394556"]
+        
+        if filters.sort != nil {
+            parameters["sort"] = String(filters.sort!)
+        }
+        
+        if filters.categories.count > 0 {
+            var categories: [String] = []
+            for category in filters.categories {
+                categories.append(String(category as String))
+            }
+            parameters["category_filter"] = ",".join(categories)
+        }
+        
+        if filters.radius != nil {
+            parameters["radius_filter"] = String(filters.radius!)
+        }
+        
+        if filters.deals != nil {
+            parameters["deals_filter"] = filters.deals! ? "true" : "false"
+        }
+        
         return RACSignal.createSignal {
             subscriber -> RACDisposable! in
 

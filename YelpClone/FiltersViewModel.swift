@@ -41,7 +41,7 @@ class FiltersViewModel: NSObject {
         self.newYelpFilters = YelpFilters(sort: yelpFilters.sort, categories: yelpFilters.categories, radius: yelpFilters.radius, deals: yelpFilters.deals)
         super.init()
         
-        sortFilters = filtersWithGroup([Filter("Best Match", 0), Filter("Distance", 1), Filter("Highest Rated", 2)], group: "sort", canSwitchOff: false, onIndex: newYelpFilters.sort)
+        sortFilters = filtersWithGroup([Filter("Best Match", 0), Filter("Distance", 1), Filter("Highest Rated", 2)], group: "sort", canSwitchOff: false, onIndex: newYelpFilters.sort ?? 0)
         
         // Yuck. TODO: If time, come up with a better implementation of YelpFilters to avoid this mess.
         var distanceFiltersIndex: Int = 0
@@ -60,7 +60,7 @@ class FiltersViewModel: NSObject {
         
         dealsFilter = FilterViewModel(services: services, filter: Filter("Has Deals?", nil), on: newYelpFilters.deals ?? false, group: "deals")
         
-        // TODO: Compe up with something better?
+        // TODO: Come up with something better?
         lessCategories = filtersWithGroup([Filter("Restaurants", "restaurants"), Filter("Bars", "bars"), Filter("Coffee & Tea", "coffee")], group: "categories")
         moreCategories = lessCategories + filtersWithGroup([Filter("Nightlife", "nightlife"), Filter("Home Services", "homeservices"), Filter("Beauty & Spas", "beautysvc"), Filter("Automotive", "auto")], group: "categories")
         
