@@ -103,7 +103,19 @@ class SearchResultsViewController: UIViewController, UISearchBarDelegate, UITabl
             self.resultsTable.reloadData()
         }
         
-        //filterButton.rac_command = viewModel.executeShowFilters
+        let loadingSignal = RACObserve(viewModel, "loading")
+        var hud = JGProgressHUD(style: JGProgressHUDStyle.Dark)
+        hud.textLabel.text = "Loading"
+        
+        loadingSignal.filter { return $0.boolValue }.subscribeNext {
+            [unowned self] _ in
+            hud.showInView(self.view)
+        }
+        
+        loadingSignal.filter { return !$0.boolValue }.subscribeNext {
+            _ in
+            hud.dismiss()
+        }
     }
     
 }
